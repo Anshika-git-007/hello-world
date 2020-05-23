@@ -1,7 +1,7 @@
 .PHONY: bootstrap clean test
 .DEFAULT_GOAL := test
 
-test: clean lint
+test: clean
 	@py.test test/ --cov app.py -s
 
 clean:
