@@ -11,10 +11,3 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-      - name: validate_pr
-        image: python
-        when:
-          event:
-            - pull_request
-        commands:
-          - make -C bootstrap test
